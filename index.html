@@ -1,0 +1,125 @@
+
+<html>	
+    <head>	
+      <meta charset="UTF-8">	
+      <title>Audio samples from " Text Markup for Prosody Control in Speech Synthesis"/title>
+    </head>	
+    <body>	
+      <div>	
+        <article>	
+          <header>	
+            <h1>Audio samples from " Text Markup for Prosody Control in Speech Synthesis"</h1>	
+          </header>	
+        </article>	
+  
+        <p><b>Authors: </b>Yuliya Korotkova, Ilya Kalinovsky.</p>	
+  
+        <p><b>Abstract:</b>	
+            Modern Text-to-Speech (TTS) technologies generate speech very close to the natural one, but synthesized voices still lack variation in intonation which, in addition, is hard to control. In this work we address the problem of prosody control aiming to capture information about intonation in a markup without hand labeling and linguistic expertise. We propose a method of encoding prosodic knowledge from textual and acoustic modalities obtained with the help of models pretrained on Self-Supervised tasks into latent quantized space with interpretable features. Based on these features, the prosodic markup is constructed, and it is used as an additional input to the TTS model in order to solve the one-to-many problem and is predicted by text. Moreover, this method allows prosody control on inference time and scalability to new data and other languages.	
+   </p>	
+  
+
+        <h2>Comparison of TTS systems</h2>	
+        <p>These examples show the difference between three types of TTS models compared in Side-by-Side testing.</p>
+        <p><b>Baseline: </b>model trained without prosodic markup.</p>
+        <p><b>Ground Truth: </b>model trained with prosodic markup, and samples are generated with ground truth labels.</p>
+        <p><b>Text Prediction: </b>model trained with prosodic markup, and samples are generated with labels predicted by text.</p>
+        <table>	
+            <thead>	
+              <tr>	
+                <th>Baseline</th><th>Ground Truth</th><th>Text Prediction</th>
+              </tr>	
+            </thead>	
+            <tbody>	
+              <tr><td colspan="6"><span>1: How much influence does the media have on people's political views?</span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
+              </tr>	
+              <tr><td colspan="6"><span>2: What are weddings like in your country?</span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
+              </tr>	
+              <tr><td colspan="6"><span>3: How much more bounderish and assertive clifford looked!</span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/pred_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
+              </tr>	
+              <tr><td colspan="6"><span>4: It was a nice movie, said mother.</span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
+              </tr>	
+              <tr><td colspan="6"><span>5: While he pondered this, let it slip, slide, dissolve away, his brother and his quiet father followed behind, allowing him to pathfind the forest alone out toward that incredible highway which would take them back to the town.</span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
+              </tr>	
+              <tr><td colspan="6"><span>6: Have you a pocket comb about you, sir?</span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
+              </tr>	
+              <tr><td colspan="6"><span>7: We both abhor suspense.</span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
+              </tr>	
+              <tr><td colspan="6"><span>8: In the meanwhile the lame horse recovered so fast, that the party to box hill was again under happy consideration.</span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
+              </tr>	
+              <tr><td colspan="6"><span>9: Yes, for there was the dog nosing around like a shadow, and waiting for him!</span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
+              </tr>	
+            </tbody>	
+        </table>
+
+        <h2>Controlability</h2>	
+        <p>These examples show how the identical text can be pronounced differently with prosodic markup modifications.</p>
+        <table>		
+            <tbody>	
+              <tr><td colspan="6"><span>1a: <span><span><span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">Where<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span> is the <span style="display:inline-flex;flex-direction:row;align-items:center;background:#ffa42166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">washroom<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">7</span></span>, Do you <span style="display:inline-flex;flex-direction:row;align-items:center;background:#1c83e166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">know<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">3</span></span>?</span></span></span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/1a.wav" type="audio/wav"></audio></td>		
+              </tr>	
+              <tr><td colspan="6"><span>1b: <span><span>Where is the <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35466;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">washroom<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">9</span></span>, Do you <span style="display:inline-flex;flex-direction:row;align-items:center;background:#803df533;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">know<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">4</span></span>?</span></span></span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/1b.wav" type="audio/wav"></audio></td>		
+              </tr>	
+              <tr><td colspan="6"><span>2a: <span><span>Does Bob play <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35466;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">basketball<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">9</span></span> every <span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">day<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span>?</span></span></span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/2a.wav" type="audio/wav"></audio></td>		
+              </tr>	
+              <tr><td colspan="6"><span>2b: <span><span>Does <span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">Bob<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span> play basketball every <span style="display:inline-flex;flex-direction:row;align-items:center;background:#1c83e166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">day<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">3</span></span>?</span></span></span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/2b.wav" type="audio/wav"></audio></td>		
+              </tr>	
+              <tr><td colspan="6"><span>3a: <span><span>How <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35466;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">beautiful<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">9</span></span> you are <span style="display:inline-flex;flex-direction:row;align-items:center;background:#1c83e166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">today<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">3</span></span>!</span></span></span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/3a.wav" type="audio/wav"></audio></td>		
+              </tr>	
+              <tr><td colspan="6"><span>3b: <span><span>3b. How beautiful you <span style="display:inline-flex;flex-direction:row;align-items:center;background:#803df533;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">are<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">4</span></span> <span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">today<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span>!</span></span></span></td></tr>	
+              <tr>	
+                <td><audio controls=""><source src="audio/3b.wav" type="audio/wav"></audio></td>		
+              </tr>	
+            </tbody>	
+          </table>	
+  
+      </div>	
+    </body>	
+  </html>	
+  
