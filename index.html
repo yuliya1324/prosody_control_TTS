@@ -15,7 +15,8 @@
         <br />
         <font size=4.2><center>Audio Samples from</center></font> <br />
             <center><b><font size=6>"Word-level Text Markup for Prosody Control in Speech Synthesis"</font></b></center></h1>
-        <p class="lead"><center><i>Yuliya Korotkova, Ilya Kalinovsky</i></center></p>
+        <p class="lead"><center><i>Yuliya Korotkova*, Ilya Kalinovsk*†, Tatiana Vakhrusheva*</i></center></p>
+        <p><center>* Just AI, †National Research Tomsk Polytechnic University</center></p>
         <br/>      
       </div>
       <br />
@@ -34,18 +35,15 @@
         <h2><center>1. Comparison of different TTS architectures</center></h2>	
 
         <table class="center" style="width: 45%; max-width: 45%;">
-          <!-- margin-left: 400px; margin-right: 400px; -->
           <tbody>
           <tr>
             <td width="200" style="word-break:normal;">
-            These examples show the influence of the proposed markup on different TTS architectures.
+            These examples, taken from MOS tests, show the influence of the proposed markup on different TTS architectures. We compared FastSpeech2 and Tacotron2 in two variants:
             <br/><br/>
-            <b>Baseline: </b>model trained without prosodic markup.
+            <b>Baseline: </b>the prosodic markup is excluded from the input to TTS model.
             <br/>
-            <b>Ground Truth: </b>model trained with prosodic markup, and samples are generated with ground truth labels from the database.
-            <br/>
-            <b>Text Prediction: </b>model trained with prosodic markup, and samples are generated with labels predicted by text.
-            </td>
+            <b>Prosody: </b>the prosodic markup is included in the input to TTS model.
+           </td>
           </tr>
           </tbody>
       </table>
@@ -55,52 +53,36 @@
         <h3><font size=4.7><center>English</center></font></h3>
         <HR align=center width=1000>
         <br/>
-        <table class="center" style="width: 50%; max-width: 50%;">	
+        <table class="center" style="width: 40%; max-width: 40%;">	
           <thead>	
             <tr>	
-                <th></th><th>Baseline</th><th>Ground Truth</th><th>Text Prediction</th>
+                <th></th><th>Baseline</th><th>Prosody</th>
             </tr>	
           </thead>	
           <tbody>	
             <tr><td colspan="X">&nbsp;</td></tr>
-            <tr><td colspan="1"><span></span></td><td colspan="3"><span>1: How much influence does the media have on people's political views?</span></td></tr>
+            <tr><td colspan="1"><span></span></td><td colspan="2"><span>1: How much influence does the media have on people's political views?</span></td></tr>
             <tr>
               <td><span>Fastspeech2</span></td>
               <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>
               <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>
               <tr>
               </tr>
               <td><span>Tacotron2</span></td>
               <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
               <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-              <!-- <tr>
-              </tr>
-              <td><span>VITS</span></td>
-              <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	 -->
             </tr>	
             <tr><td colspan="X">&nbsp;</td></tr>
-            <tr><td colspan="1"><span></span></td><td colspan="3"><span>2: What are weddings like in your country?</span></td></tr>	
+            <tr><td colspan="1"><span></span></td><td colspan="2"><span>2: What are weddings like in your country?</span></td></tr>	
             <tr>	
               <td><span>Fastspeech2</span></td>
               <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
               <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
               <tr>
               </tr>
               <td><span>Tacotron2</span></td>
               <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
               <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-              <!-- <tr>
-              </tr>
-              <td><span>VITS</span></td>
-              <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	 -->
             </tr>	
             <tr><td colspan="X">&nbsp;</td></tr>
             <tr><td colspan="1"><span></span></td><td colspan="3"><span>3: How much more bounderish and assertive clifford looked!</span></td></tr>	
@@ -108,19 +90,11 @@
               <td><span>Fastspeech2</span></td>
               <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
               <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>
               <tr>
               </tr>
               <td><span>Tacotron2</span></td>
               <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
               <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>
-              <!-- <tr>
-              </tr>
-              <td><span>VITS</span></td>
-              <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	 -->
             </tr>	
             <tr><td colspan="X">&nbsp;</td></tr>
             <tr><td colspan="1"><span></span></td><td colspan="3"><span>4: It was a nice movie, said mother.</span></td></tr>	
@@ -128,19 +102,11 @@
               <td><span>Fastspeech2</span></td>
               <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
               <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>
               <tr>
               </tr>
               <td><span>Tacotron2</span></td>
               <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
               <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>
-              <!-- <tr>
-              </tr>
-              <td><span>VITS</span></td>
-              <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	 -->
             </tr>	
             <tr><td colspan="X">&nbsp;</td></tr>
             <tr><td colspan="1"><span></span></td><td colspan="3"><span>5: While he pondered this, let it slip, slide, dissolve away, his brother and his quiet father followed behind, allowing him to pathfind the forest alone out toward that incredible highway which would take them back to the town.</span></td></tr>	
@@ -148,99 +114,11 @@
               <td><span>Fastspeech2</span></td>
               <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
               <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
               <tr>
               </tr>
               <td><span>Tacotron2</span></td>
               <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
               <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-              <!-- <tr>
-              </tr>
-              <td><span>VITS</span></td>
-              <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	 -->
-            </tr>	
-            <tr><td colspan="X">&nbsp;</td></tr>
-            <tr><td colspan="1"><span></span></td><td colspan="3"><span>6: Have you a pocket comb about you, sir?</span></td></tr>	
-            <tr>	
-              <td><span>Fastspeech2</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-              <tr>
-              </tr>
-              <td><span>Tacotron2</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-              <!-- <tr>
-              </tr>
-              <td><span>VITS</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	 -->
-            </tr>	
-            <tr><td colspan="X">&nbsp;</td></tr>
-            <tr><td colspan="1"><span></span></td><td colspan="3"><span>7: We both abhor suspense.</span></td></tr>	
-            <tr>	
-              <td><span>Fastspeech2</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-              <tr>
-              </tr>
-              <td><span>Tacotron2</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-              <!-- <tr>
-              </tr>
-              <td><span>VITS</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	 -->
-            </tr>	
-            <tr><td colspan="X">&nbsp;</td></tr>
-            <tr><td colspan="1"><span></span></td><td colspan="3"><span>8: In the meanwhile the lame horse recovered so fast, that the party to box hill was again under happy consideration.</span></td></tr>	
-            <tr>	
-              <td><span>Fastspeech2</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-              <tr>
-              </tr>
-              <td><span>Tacotron2</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-              <!-- <tr>
-              </tr>
-              <td><span>VITS</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	 -->
-            </tr>	
-            <tr><td colspan="X">&nbsp;</td></tr>
-            <tr><td colspan="1"><span></span></td><td colspan="3"><span>9: Yes, for there was the dog nosing around like a shadow, and waiting for him!</span></td></tr>	
-            <tr>	
-              <td><span>Fastspeech2</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>
-            <tr>
-            </tr>	
-              <td><span>Tacotron2</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>
-            <!-- <tr>
-            </tr>
-              <td><span>VITS</span></td>
-              <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-              <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	 -->
             </tr>	
           </tbody>	
       </table>
@@ -250,192 +128,84 @@
       <h3><font size=4.7><center>Russian</center></font></h3>
       <HR align=center width=1000>
       <br/>
-      <table class="center" style="width: 50%; max-width: 50%;">	
+      <table class="center" style="width: 40%; max-width: 40%;">	
         <thead>	
           <tr>	
-              <th></th><th>Baseline</th><th>Ground Truth</th><th>Text Prediction</th>
+              <th></th><th>Baseline</th><th>Prosody</th>
           </tr>	
         </thead>	
         <tbody>	
           <tr><td colspan="X">&nbsp;</td></tr>
-          <tr><td colspan="1"><span></span></td><td colspan="3"><span>1: How much influence does the media have on people's political views?</span></td></tr>
+          <tr><td colspan="1"><span></span></td><td colspan="2"><span>1: Как ты смог столько выучить, если у тебя было всего два дня?</span></td></tr>
           <tr>
             <td><span>Fastspeech2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/RU/test/101_ada_baseline.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/RU/test/101_ada_prosody.wav" type="audio/wav"></audio></td>
             <tr>
             </tr>
             <td><span>Tacotron2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-            <!-- <tr>
-            </tr>
-            <td><span>VITS</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	 -->
+            <td><audio controls=""><source src="audio/RU/test/101_taco_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/101_taco_prosody.wav" type="audio/wav"></audio></td>	
           </tr>	
           <tr><td colspan="X">&nbsp;</td></tr>
-          <tr><td colspan="1"><span></span></td><td colspan="3"><span>2: What are weddings like in your country?</span></td></tr>	
+          <tr><td colspan="1"><span></span></td><td colspan="3"><span>2: Послушай, Володя, тебе ни разу не приходило в голову, что никогда, понимаешь, никогда двое людей не поймут вполне друг друга?</span></td></tr>	
           <tr>	
             <td><span>Fastspeech2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/64_ada_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/64_ada_prosody.wav" type="audio/wav"></audio></td>	
             <tr>
             </tr>
             <td><span>Tacotron2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-            <!-- <tr>
-            </tr>
-            <td><span>VITS</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	 -->
+            <td><audio controls=""><source src="audio/RU/test/64_taco_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/64_taco_prosody.wav" type="audio/wav"></audio></td>	
           </tr>	
           <tr><td colspan="X">&nbsp;</td></tr>
-          <tr><td colspan="1"><span></span></td><td colspan="3"><span>3: How much more bounderish and assertive clifford looked!</span></td></tr>	
+          <tr><td colspan="1"><span></span></td><td colspan="3"><span>3: Некоторые лошади были потеряны.</span></td></tr>	
           <tr>	
             <td><span>Fastspeech2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/RU/test/43_ada_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/43_ada_prosody.wav" type="audio/wav"></audio></td>	
             <tr>
             </tr>
             <td><span>Tacotron2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>
-            <!-- <tr>
-            </tr>
-            <td><span>VITS</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	 -->
+            <td><audio controls=""><source src="audio/RU/test/43_taco_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/43_taco_prosody.wav" type="audio/wav"></audio></td>	
           </tr>	
           <tr><td colspan="X">&nbsp;</td></tr>
-          <tr><td colspan="1"><span></span></td><td colspan="3"><span>4: It was a nice movie, said mother.</span></td></tr>	
+          <tr><td colspan="1"><span></span></td><td colspan="3"><span>4: К примеру, как-то понадобилось привезти туда бульдозер.</span></td></tr>	
           <tr>	
             <td><span>Fastspeech2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="audio/RU/test/29_ada_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/29_ada_prosody.wav" type="audio/wav"></audio></td>	
             <tr>
             </tr>
             <td><span>Tacotron2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>
-            <!-- <tr>
-            </tr>
-            <td><span>VITS</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	 -->
+            <td><audio controls=""><source src="audio/RU/test/29_taco_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/29_taco_prosody.wav" type="audio/wav"></audio></td>	
           </tr>	
           <tr><td colspan="X">&nbsp;</td></tr>
-          <tr><td colspan="1"><span></span></td><td colspan="3"><span>5: While he pondered this, let it slip, slide, dissolve away, his brother and his quiet father followed behind, allowing him to pathfind the forest alone out toward that incredible highway which would take them back to the town.</span></td></tr>	
+          <tr><td colspan="1"><span></span></td><td colspan="3"><span>5: Анна твоя сестра или подруга?</span></td></tr>	
           <tr>	
             <td><span>Fastspeech2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/102_ada_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/102_ada_prosody.wav" type="audio/wav"></audio></td>	
             <tr>
             </tr>
             <td><span>Tacotron2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-            <!-- <tr>
-            </tr>
-            <td><span>VITS</span></td>
-            <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	 -->
+            <td><audio controls=""><source src="audio/RU/test/102_taco_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/102_taco_prosody.wav" type="audio/wav"></audio></td>	
           </tr>	
           <tr><td colspan="X">&nbsp;</td></tr>
-          <tr><td colspan="1"><span></span></td><td colspan="3"><span>6: Have you a pocket comb about you, sir?</span></td></tr>	
+          <tr><td colspan="1"><span></span></td><td colspan="3"><span>6: Пока общество коченеет, частная жизнь делается все злее.</span></td></tr>	
           <tr>	
             <td><span>Fastspeech2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/166_ada_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/166_ada_prosody.wav" type="audio/wav"></audio></td>	
             <tr>
             </tr>
             <td><span>Tacotron2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-            <!-- <tr>
-            </tr>
-            <td><span>VITS</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	 -->
-          </tr>	
-          <tr><td colspan="X">&nbsp;</td></tr>
-          <tr><td colspan="1"><span></span></td><td colspan="3"><span>7: We both abhor suspense.</span></td></tr>	
-          <tr>	
-            <td><span>Fastspeech2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-            <tr>
-            </tr>
-            <td><span>Tacotron2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-            <!-- <tr>
-            </tr>
-            <td><span>VITS</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	 -->
-          </tr>	
-          <tr><td colspan="X">&nbsp;</td></tr>
-          <tr><td colspan="1"><span></span></td><td colspan="3"><span>8: In the meanwhile the lame horse recovered so fast, that the party to box hill was again under happy consideration.</span></td></tr>	
-          <tr>	
-            <td><span>Fastspeech2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-            <tr>
-            </tr>
-            <td><span>Tacotron2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-            <!-- <tr>
-            </tr>
-            <td><span>VITS</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	 -->
-          </tr>	
-          <tr><td colspan="X">&nbsp;</td></tr>
-          <tr><td colspan="1"><span></span></td><td colspan="3"><span>9: Yes, for there was the dog nosing around like a shadow, and waiting for him!</span></td></tr>	
-          <tr>	
-            <td><span>Fastspeech2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>
-          <tr>
-          </tr>	
-            <td><span>Tacotron2</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>
-          <!-- <tr>
-          </tr>
-            <td><span>VITS</span></td>
-            <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-            <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	 -->
+            <td><audio controls=""><source src="audio/RU/test/166_taco_baseline.wav" type="audio/wav"></audio></td>	
+            <td><audio controls=""><source src="audio/RU/test/166_taco_prosody.wav" type="audio/wav"></audio></td>	
           </tr>	
         </tbody>	
     </table>
@@ -445,52 +215,36 @@
     <h3><font size=4.7><center>Portuguese</center></font></h3>
     <HR align=center width=1000>
     <br/>
-    <table class="center" style="width: 50%; max-width: 50%;">	
+    <table class="center" style="width: 40%; max-width: 40%;">	
       <thead>	
         <tr>	
-            <th></th><th>Baseline</th><th>Ground Truth</th><th>Text Prediction</th>
+            <th></th><th>Baseline</th><th>Prosody</th>
         </tr>	
       </thead>	
       <tbody>	
         <tr><td colspan="X">&nbsp;</td></tr>
-        <tr><td colspan="1"><span></span></td><td colspan="3"><span>1: How much influence does the media have on people's political views?</span></td></tr>
+        <tr><td colspan="1"><span></span></td><td colspan="2"><span>1: Как ты смог столько выучить, если у тебя было всего два дня?</span></td></tr>
         <tr>
           <td><span>Fastspeech2</span></td>
           <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>
           <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>
           <tr>
           </tr>
           <td><span>Tacotron2</span></td>
           <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
           <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-          <!-- <tr>
-          </tr>
-          <td><span>VITS</span></td>
-          <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5653.wav" type="audio/wav"></audio></td>	 -->
         </tr>	
         <tr><td colspan="X">&nbsp;</td></tr>
-        <tr><td colspan="1"><span></span></td><td colspan="3"><span>2: What are weddings like in your country?</span></td></tr>	
+        <tr><td colspan="1"><span></span></td><td colspan="2"><span>2: What are weddings like in your country?</span></td></tr>	
         <tr>	
           <td><span>Fastspeech2</span></td>
           <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
           <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
           <tr>
           </tr>
           <td><span>Tacotron2</span></td>
           <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
           <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-          <!-- <tr>
-          </tr>
-          <td><span>VITS</span></td>
-          <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_8_special_questions_2_002_5692.wav" type="audio/wav"></audio></td>	 -->
         </tr>	
         <tr><td colspan="X">&nbsp;</td></tr>
         <tr><td colspan="1"><span></span></td><td colspan="3"><span>3: How much more bounderish and assertive clifford looked!</span></td></tr>	
@@ -498,19 +252,11 @@
           <td><span>Fastspeech2</span></td>
           <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
           <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>
           <tr>
           </tr>
           <td><span>Tacotron2</span></td>
           <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
           <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>
-          <!-- <tr>
-          </tr>
-          <td><span>VITS</span></td>
-          <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_13_exclamation_point_1_002_5343.wav" type="audio/wav"></audio></td>	 -->
         </tr>	
         <tr><td colspan="X">&nbsp;</td></tr>
         <tr><td colspan="1"><span></span></td><td colspan="3"><span>4: It was a nice movie, said mother.</span></td></tr>	
@@ -518,19 +264,11 @@
           <td><span>Fastspeech2</span></td>
           <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
           <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>
           <tr>
           </tr>
           <td><span>Tacotron2</span></td>
           <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
           <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>
-          <!-- <tr>
-          </tr>
-          <td><span>VITS</span></td>
-          <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4254.wav" type="audio/wav"></audio></td>	 -->
         </tr>	
         <tr><td colspan="X">&nbsp;</td></tr>
         <tr><td colspan="1"><span></span></td><td colspan="3"><span>5: While he pondered this, let it slip, slide, dissolve away, his brother and his quiet father followed behind, allowing him to pathfind the forest alone out toward that incredible highway which would take them back to the town.</span></td></tr>	
@@ -538,99 +276,11 @@
           <td><span>Fastspeech2</span></td>
           <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
           <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
           <tr>
           </tr>
           <td><span>Tacotron2</span></td>
           <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
           <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-          <!-- <tr>
-          </tr>
-          <td><span>VITS</span></td>
-          <td><audio controls=""><source src="audio/baseline_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Matt__data_Matt_dandelion_wine_1_002_4395.wav" type="audio/wav"></audio></td>	 -->
-        </tr>	
-        <tr><td colspan="X">&nbsp;</td></tr>
-        <tr><td colspan="1"><span></span></td><td colspan="3"><span>6: Have you a pocket comb about you, sir?</span></td></tr>	
-        <tr>	
-          <td><span>Fastspeech2</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-          <tr>
-          </tr>
-          <td><span>Tacotron2</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-          <!-- <tr>
-          </tr>
-          <td><span>VITS</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_000_569.wav" type="audio/wav"></audio></td>	 -->
-        </tr>	
-        <tr><td colspan="X">&nbsp;</td></tr>
-        <tr><td colspan="1"><span></span></td><td colspan="3"><span>7: We both abhor suspense.</span></td></tr>	
-        <tr>	
-          <td><span>Fastspeech2</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-          <tr>
-          </tr>
-          <td><span>Tacotron2</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-          <!-- <tr>
-          </tr>
-          <td><span>VITS</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_003_6082.wav" type="audio/wav"></audio></td>	 -->
-        </tr>	
-        <tr><td colspan="X">&nbsp;</td></tr>
-        <tr><td colspan="1"><span></span></td><td colspan="3"><span>8: In the meanwhile the lame horse recovered so fast, that the party to box hill was again under happy consideration.</span></td></tr>	
-        <tr>	
-          <td><span>Fastspeech2</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-          <tr>
-          </tr>
-          <td><span>Tacotron2</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-          <!-- <tr>
-          </tr>
-          <td><span>VITS</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_008_16297.wav" type="audio/wav"></audio></td>	 -->
-        </tr>	
-        <tr><td colspan="X">&nbsp;</td></tr>
-        <tr><td colspan="1"><span></span></td><td colspan="3"><span>9: Yes, for there was the dog nosing around like a shadow, and waiting for him!</span></td></tr>	
-        <tr>	
-          <td><span>Fastspeech2</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>
-        <tr>
-        </tr>	
-          <td><span>Tacotron2</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>
-        <!-- <tr>
-        </tr>
-          <td><span>VITS</span></td>
-          <td><audio controls=""><source src="audio/baseline_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/prosody_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	
-          <td><audio controls=""><source src="audio/pred_Catherene__data_Catherene_009_19798.wav" type="audio/wav"></audio></td>	 -->
         </tr>	
       </tbody>	
   </table>
@@ -692,14 +342,14 @@
                 <!-- <td><audio controls=""><source src="audio/EN/control/en_2b_vits.wav" type="audio/wav"></audio></td>		 -->
               </tr>	
               <tr><td colspan="X">&nbsp;</td></tr>
-              <tr><td colspan="4"><span>3a: <span><span>Where is the <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35433;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">washroom<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">0</span></span>, Do you <span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">know<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span>?</span></span></span></td></tr>	
+              <tr><td colspan="4"><span>3a: <span><span>Where is the <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35433;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">washroom<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">0</span></span>, do you <span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">know<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span>?</span></span></span></td></tr>	
               <tr>	
                 <td><audio controls=""><source src="audio/EN/control/en_3a_ada.wav" type="audio/wav"></audio></td>
                 <td><audio controls=""><source src="audio/EN/control/en_3a_taco.wav" type="audio/wav"></audio></td>
                 <!-- <td><audio controls=""><source src="audio/EN/control/en_3a_vits.wav" type="audio/wav"></audio></td>		 -->
               </tr>	
               <tr><td colspan="X">&nbsp;</td></tr>
-              <tr><td colspan="4"><span>3b: <span><span><span style="display:inline-flex;flex-direction:row;align-items:center;background:#80849566;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">Where<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">5</span></span> is the <span style="display:inline-flex;flex-direction:row;align-items:center;background:#1c83e166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">washroom<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">3</span></span>, Do you <span style="display:inline-flex;flex-direction:row;align-items:center;background:#80849566;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">know<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">5</span></span>?</span></span></span></td></tr>	
+              <tr><td colspan="4"><span>3b: <span><span><span style="display:inline-flex;flex-direction:row;align-items:center;background:#80849566;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">Where<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">5</span></span> is the <span style="display:inline-flex;flex-direction:row;align-items:center;background:#1c83e166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">washroom<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">3</span></span>, do you <span style="display:inline-flex;flex-direction:row;align-items:center;background:#80849566;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">know<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">5</span></span>?</span></span></span></td></tr>	
               <tr>	
                 <td><audio controls=""><source src="audio/EN/control/en_3b_ada.wav" type="audio/wav"></audio></td>
                 <td><audio controls=""><source src="audio/EN/control/en_3b_taco.wav" type="audio/wav"></audio></td>
@@ -780,45 +430,45 @@
             </thead>		
             <tbody>	
               <tr><td colspan="X">&nbsp;</td></tr>
-              <tr><td colspan="4"><span>1a: <span><span><span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">Where<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span> is the <span style="display:inline-flex;flex-direction:row;align-items:center;background:#ffa42166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">washroom<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">7</span></span>, Do you <span style="display:inline-flex;flex-direction:row;align-items:center;background:#1c83e166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">know<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">3</span></span>?</span></span></span></td></tr>	
+              <tr><td colspan="4"><span>1a: <span><span>Como você está <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35433;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">linda<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">0</span></span><span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">hoje<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span>!</span></span></span></td></tr>	
               <tr>	
-                <td><audio controls=""><source src="audio/1a.wav" type="audio/wav"></audio></td>	
-                <td><audio controls=""><source src="audio/1a.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_1a_pt.wav" type="audio/wav"></audio></td>	
+                <td><audio controls=""><source src="audio/PT/control/ada_1a_pt.wav" type="audio/wav"></audio></td>
                 <!-- <td><audio controls=""><source src="audio/1a.wav" type="audio/wav"></audio></td>	 -->
               </tr>	
               <tr><td colspan="X">&nbsp;</td></tr>
-              <tr><td colspan="4"><span>1b: <span><span>Where is the <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35466;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">washroom<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">9</span></span>, Do you <span style="display:inline-flex;flex-direction:row;align-items:center;background:#803df533;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">know<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">4</span></span>?</span></span></span></td></tr>	
+              <tr><td colspan="4"><span>1b: <span><span>Como <span style="display:inline-flex;flex-direction:row;align-items:center;background:#803df533;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">você<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">4</span></span> <span style="display:inline-flex;flex-direction:row;align-items:center;background:#803df533;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">está<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">4</span></span> linda <span style="display:inline-flex;flex-direction:row;align-items:center;background:#00c0f233;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">hoje<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">2</span></span>!</span></span></span></td></tr>	
               <tr>	
-                <td><audio controls=""><source src="audio/1b.wav" type="audio/wav"></audio></td>
-                <td><audio controls=""><source src="audio/1b.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_1b_pt.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_1b_pt.wav" type="audio/wav"></audio></td>
                 <!-- <td><audio controls=""><source src="audio/1b.wav" type="audio/wav"></audio></td>				 -->
               </tr>	
               <tr><td colspan="X">&nbsp;</td></tr>
-              <tr><td colspan="4"><span>2a: <span><span>Does Bob play <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35466;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">basketball<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">9</span></span> every <span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">day<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span>?</span></span></span></td></tr>	
+              <tr><td colspan="4"><span>2a: <span><span><span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">Você<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span> <span style="display:inline-flex;flex-direction:row;align-items:center;background:#00c0f233;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">sabe<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">2</span></span> que horas <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35433;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">são<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">0</span></span>?</span></span></span></td></tr>	
               <tr>	
-                <td><audio controls=""><source src="audio/2a.wav" type="audio/wav"></audio></td>
-                <td><audio controls=""><source src="audio/2a.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_2a_pt.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_2a_pt.wav" type="audio/wav"></audio></td>
                 <!-- <td><audio controls=""><source src="audio/2a.wav" type="audio/wav"></audio></td>		 -->
               </tr>	
               <tr><td colspan="X">&nbsp;</td></tr>
-              <tr><td colspan="4"><span>2b: <span><span>Does <span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">Bob<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span> play basketball every <span style="display:inline-flex;flex-direction:row;align-items:center;background:#1c83e166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">day<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">3</span></span>?</span></span></span></td></tr>	
+              <tr><td colspan="4"><span>2b: <span><span>Você sabe <span style="display:inline-flex;flex-direction:row;align-items:center;background:#ffa42166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">que<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">7</span></span> <span style="display:inline-flex;flex-direction:row;align-items:center;background:#80849566;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">que<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">5</span></span> <span style="display:inline-flex;flex-direction:row;align-items:center;background:#803df533;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">são<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">4</span></span>?</span></span></span></td></tr>	
               <tr>	
-                <td><audio controls=""><source src="audio/2b.wav" type="audio/wav"></audio></td>
-                <td><audio controls=""><source src="audio/2b.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_2b_pt.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_2b_pt.wav" type="audio/wav"></audio></td>
                 <!-- <td><audio controls=""><source src="audio/2b.wav" type="audio/wav"></audio></td>		 -->
               </tr>	
               <tr><td colspan="X">&nbsp;</td></tr>
-              <tr><td colspan="4"><span>3a: <span><span>How <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35466;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">beautiful<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">9</span></span> you are <span style="display:inline-flex;flex-direction:row;align-items:center;background:#1c83e166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">today<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">3</span></span>!</span></span></span></td></tr>	
+              <tr><td colspan="4"><span>3a: <span><span>Onde fica o <span style="display:inline-flex;flex-direction:row;align-items:center;background:#21c35466;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">banheiro<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">9</span></span>, você <span style="display:inline-flex;flex-direction:row;align-items:center;background:#1c83e166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">sabe<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">3</span></span>?</span></span></span></td></tr>	
               <tr>	
-                <td><audio controls=""><source src="audio/3a.wav" type="audio/wav"></audio></td>
-                <td><audio controls=""><source src="audio/3a.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_3a_pt.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_3a_pt.wav" type="audio/wav"></audio></td>
                 <!-- <td><audio controls=""><source src="audio/3a.wav" type="audio/wav"></audio></td>		 -->
               </tr>	
               <tr><td colspan="X">&nbsp;</td></tr>
-              <tr><td colspan="4"><span>3b: <span><span>How beautiful you <span style="display:inline-flex;flex-direction:row;align-items:center;background:#803df533;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">are<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">4</span></span> <span style="display:inline-flex;flex-direction:row;align-items:center;background:#00d4b166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">today<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">1</span></span>!</span></span></span></td></tr>	
+              <tr><td colspan="4"><span>3b: <span><span><span style="display:inline-flex;flex-direction:row;align-items:center;background:#ffe31233;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">Onde<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">8</span></span> <span style="display:inline-flex;flex-direction:row;align-items:center;background:#80849566;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">fica<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">5</span></span> o banheiro, você <span style="display:inline-flex;flex-direction:row;align-items:center;background:#ffa42166;border-radius:0.5rem;padding:0.25rem 0.5rem;overflow:hidden;line-height:1">sabe<span style="border-left:1px solid;opacity:0.1;margin-left:0.5rem;align-self:stretch"></span><span style="margin-left:0.5rem;font-size:0.75rem;opacity:0.5">7</span></span>?</span></span></span></td></tr>	
               <tr>	
-                <td><audio controls=""><source src="audio/3b.wav" type="audio/wav"></audio></td>
-                <td><audio controls=""><source src="audio/3b.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_3b_pt.wav" type="audio/wav"></audio></td>
+                <td><audio controls=""><source src="audio/PT/control/ada_3b_pt.wav" type="audio/wav"></audio></td>
                 <!-- <td><audio controls=""><source src="audio/3b.wav" type="audio/wav"></audio></td>		 -->
               </tr>	
             </tbody>	
@@ -830,7 +480,7 @@
             <tbody>
             <tr>
               <td width="200" style="word-break:normal;">
-              These examples show how different prosodic tags influence the intonation on a single word.
+              These examples show how different prosodic tags influence the intonation on a single word. The target word is highlighted in red in text and is put between red dashed lines in spectrograms.
               </td>
             </tr>
             </tbody>
@@ -853,7 +503,7 @@
             </tr>
             <tr>
               <td>-1</td>
-              <td><audio src="./audio/EN/modifications/ada_indeed_-1.wav" controls="" width="250"></audio></td>
+              <td><audio src="./audio/EN/modifications/ada_indeed_-1.wav" controls=""></audio></td>
               <td rowspan="11"><img src="./audio/EN/modifications/ada_indeed.png" width="250"/></td>
               <td><audio src="./audio/EN/modifications/taco_indeed_-1.wav" controls=""></audio></td>
               <td rowspan="11"><img src="./audio/EN/modifications/taco_indeed.png" width="260"/></td>
@@ -939,8 +589,8 @@
             </tr>
             <tr>
               <td>-1</td>
-              <td><audio src="./audio/RU/modifications/ada_pravda_-1.wav" controls="" width="250"></audio></td>
-              <td rowspan="11"><img src="./audio/RU/modifications/ada_ru.png" width="250"/></td>
+              <td><audio src="./audio/RU/modifications/ada_pravda_-1.wav" controls=""></audio></td>
+              <td rowspan="11"><img src="./audio/RU/modifications/ada_ru.png" width="260"/></td>
               <td><audio src="./audio/RU/modifications/taco_pravda_-1.wav" controls=""></audio></td>
               <td rowspan="11"><img src="./audio/RU/modifications/taco_ru.png" width="260"/></td>
               <!-- <td width="5%"><audio src="./audio/EN/modifications/vits_indeed_-1.wav" controls=""></audio></td>
@@ -1015,7 +665,7 @@
           <br/>
   
           <table class="center" style="width: 50%; max-width: 50%;">
-            <tbody><tr><td scope="col" colspan="5" bgcolor="#F8F8F8" align='center'><b>We had been wandering, <font color='#FF0000'>indeed</font>, in the leafless shrubbery an hour in the morning.</b></td>
+            <tbody><tr><td scope="col" colspan="5" bgcolor="#F8F8F8" align='center'><b><font color='#FF0000'>Na verdade</font>, pela manhã, tínhamos andado durante uma hora entre os arbustos desfolhados.</b></td>
             </tr>
             <tr>
                 <td></td>
@@ -1025,71 +675,71 @@
             </tr>
             <tr>
               <td>-1</td>
-              <td><audio src="./audio/EN/modifications/ada_indeed_-1.wav" controls="" width="250"></audio></td>
-              <td rowspan="11"><img src="./audio/EN/modifications/ada_indeed.png" width="250"/></td>
-              <td><audio src="./audio/EN/modifications/taco_indeed_-1.wav" controls=""></audio></td>
-              <td rowspan="11"><img src="./audio/EN/modifications/taco_indeed.png" width="260"/></td>
+              <td><audio src="./audio/PT/modifications/ada_pt_-1.wav" controls="" width="250"></audio></td>
+              <td rowspan="11"><img src="./audio/PT/modifications/ada_pt.png" width="300"/></td>
+              <td><audio src="./audio/PT/modifications/ada_pt_-1.wav" controls=""></audio></td>
+              <td rowspan="11"><img src="./audio/PT/modifications/ada_pt.png" width="300"/></td>
               <!-- <td width="5%"><audio src="./audio/EN/modifications/vits_indeed_-1.wav" controls=""></audio></td>
               <td rowspan="11"><img src="./audio/EN/modifications/ada.png" width="250"/></td> -->
           </tr>
             <tr>
                 <td>0</td>
-                <td><audio src="./audio/EN/modifications/ada_indeed_0.wav" controls=""></audio></td>
-                <td><audio src="./audio/EN/modifications/taco_indeed_0.wav" controls=""></audio></td>
+                <td><audio src="./audio/PT/modifications/ada_pt_0.wav" controls=""></audio></td>
+                <td><audio src="./audio/PT/modifications/ada_pt_0.wav" controls=""></audio></td>
                 <!-- <td width="5%"><audio src="./audio/EN/modifications/vits_indeed_0.wav" controls=""></audio></td> -->
             </tr>
             <tr>
                 <td>1</td>
-                <td><audio src="./audio/EN/modifications/ada_indeed_1.wav" controls=""></audio></td>
-                <td><audio src="./audio/EN/modifications/taco_indeed_1.wav" controls=""></audio></td>
+                <td><audio src="./audio/PT/modifications/ada_pt_1.wav" controls=""></audio></td>
+                <td><audio src="./audio/PT/modifications/ada_pt_1.wav" controls=""></audio></td>
                 <!-- <td width="5%"><audio src="./audio/EN/modifications/vits_indeed_1.wav" controls=""></audio></td> -->
             </tr>
             <tr>
                 <td>2</td>
-                <td><audio src="./audio/EN/modifications/ada_indeed_2.wav" controls=""></audio></td>
-                <td><audio src="./audio/EN/modifications/taco_indeed_2.wav" controls=""></audio></td>
+                <td><audio src="./audio/PT/modifications/ada_pt_2.wav" controls=""></audio></td>
+                <td><audio src="./audio/PT/modifications/ada_pt_2.wav" controls=""></audio></td>
                 <!-- <td width="5%"><audio src="./audio/EN/modifications/vits_indeed_2.wav" controls=""></audio></td> -->
             </tr>
             <tr>
                 <td>3</td>
-                <td><audio src="./audio/EN/modifications/ada_indeed_3.wav" controls=""></audio></td>
-                <td><audio src="./audio/EN/modifications/taco_indeed_3.wav" controls=""></audio></td>
+                <td><audio src="./audio/PT/modifications/ada_pt_3.wav" controls=""></audio></td>
+                <td><audio src="./audio/PT/modifications/ada_pt_3.wav" controls=""></audio></td>
                 <!-- <td width="5%"><audio src="./audio/EN/modifications/vits_indeed_3.wav" controls=""></audio></td> -->
             </tr>
             <tr>
                 <td>4</td>
-                <td><audio src="./audio/EN/modifications/ada_indeed_4.wav" controls=""></audio></td>
-                <td><audio src="./audio/EN/modifications/taco_indeed_4.wav" controls=""></audio></td>
+                <td><audio src="./audio/PT/modifications/ada_pt_4.wav" controls=""></audio></td>
+                <td><audio src="./audio/PT/modifications/ada_pt_4.wav" controls=""></audio></td>
                 <!-- <td width="10%"><audio src="./audio/EN/modifications/vits_indeed_4.wav" controls=""></audio></td> -->
             </tr>
             <tr>
               <td>5</td>
-              <td><audio src="./audio/EN/modifications/ada_indeed_5.wav" controls=""></audio></td>
-              <td><audio src="./audio/EN/modifications/taco_indeed_5.wav" controls=""></audio></td>
+              <td><audio src="./audio/PT/modifications/ada_pt_5.wav" controls=""></audio></td>
+              <td><audio src="./audio/PT/modifications/ada_pt_5.wav" controls=""></audio></td>
               <!-- <td width="10%"><audio src="./audio/EN/modifications/vits_indeed_5.wav" controls=""></audio></td> -->
           </tr>
           <tr>
             <td>6</td>
-            <td><audio src="./audio/EN/modifications/ada_indeed_6.wav" controls=""></audio></td>
-            <td><audio src="./audio/EN/modifications/taco_indeed_6.wav" controls=""></audio></td>
+            <td><audio src="./audio/PT/modifications/ada_pt_6.wav" controls=""></audio></td>
+            <td><audio src="./audio/PT/modifications/ada_pt_6.wav" controls=""></audio></td>
             <!-- <td width="10%"><audio src="./audio/EN/modifications/vits_indeed_6.wav" controls=""></audio></td> -->
         </tr>
         <tr>
           <td>7</td>
-          <td><audio src="./audio/EN/modifications/ada_indeed_7.wav" controls=""></audio></td>
-          <td><audio src="./audio/EN/modifications/taco_indeed_7.wav" controls=""></audio></td>
+          <td><audio src="./audio/PT/modifications/ada_pt_7.wav" controls=""></audio></td>
+          <td><audio src="./audio/PT/modifications/ada_pt_7.wav" controls=""></audio></td>
           <!-- <td width="10%"><audio src="./audio/EN/modifications/vits_indeed_7.wav" controls=""></audio></td> -->
         </tr>
         <tr>
           <td>8</td>
-          <td><audio src="./audio/EN/modifications/ada_indeed_8.wav" controls=""></audio></td>
-          <td><audio src="./audio/EN/modifications/taco_indeed_8.wav" controls=""></audio></td>
+          <td><audio src="./audio/PT/modifications/ada_pt_8.wav" controls=""></audio></td>
+          <td><audio src="./audio/PT/modifications/ada_pt_8.wav" controls=""></audio></td>
           <!-- <td width="10%"><audio src="./audio/EN/modifications/vits_indeed_8.wav" controls=""></audio></td> -->
         </tr>
         <tr>
           <td>9</td>
-          <td><audio src="./audio/EN/modifications/ada_indeed_9.wav" controls=""></audio></td>
-          <td><audio src="./audio/EN/modifications/taco_indeed_9.wav" controls=""></audio></td>
+          <td><audio src="./audio/PT/modifications/ada_pt_9.wav" controls=""></audio></td>
+          <td><audio src="./audio/PT/modifications/ada_pt_9.wav" controls=""></audio></td>
           <!-- <td width="10%"><audio src="./audio/EN/modifications/vits_indeed_9.wav" controls=""></audio></td> -->
         </tr>
         </tbody></table>
